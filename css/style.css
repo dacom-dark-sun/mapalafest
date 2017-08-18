@@ -1338,3 +1338,30 @@ background: linear-gradient(30deg, rgb(30, 50, 230) 30%, rgb(90, 140, 250) 70%);
 
 
 }
+
+
+
+@media screen and (max-width:600px) {
+    .img_hide {
+        display: none;
+    }
+    .who-welcome-item__content{
+      width: 100%;
+      text-align: center;
+
+    }
+
+    .who-welcome-item__content p{
+      line-height: 2;
+      
+    }
+    .guests{
+      height: 180px;
+      margin-top: 60px;
+      line-height: 2;
+    }
+    .text-center{
+          margin-right: 0px !important;
+          margin-left: 0px !important;
+    }
+}
