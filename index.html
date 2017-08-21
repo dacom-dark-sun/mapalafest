@@ -266,7 +266,7 @@
 
                 <button class="btn btn-red mt-3" data-toggle="modal" data-target="#exampleModal">Участвовать</button>
                 <div class="timer" style="padding-top: 20px; display: none">
-                    <script src="http://megatimer.ru/s/a4588676d206f933ee3a6a8d16e9f9ab.js"></script>  
+                   
                     <p> до увеличения цены</p>  
                 </div>
             </div>
@@ -347,42 +347,47 @@
                 <form class="order-form inputs">
                     <label class="input">
                         <div class="input-title">Имя участника (nickname)</div>
-                        <input type="text" placeholder="Только латинские буквы">
+                        <input type="text" id="nickname" placeholder="Только латинские буквы">
                     </label>
                     <label class="input">
                         <div class="input-title">Введите свой пароль</div>
-                        <input type="password" placeholder="Пароль">
+                        <input id="pass" type="password" placeholder="Пароль">
                     </label>
 
                     <label class="input">
                         <div class="input-title">Введите свой Email</div>
-                        <input type="email" placeholder="Email">
+                        <input type="email" id="email" placeholder="Email">
                     </label>
                     <div class="input">
+                        <div class="input-title">Количество</div>
+                             <input class="kolvo" id="kolvo" type="number" min="1" value="1" style="max-width: 50px">
+                    </div>
+                    <div class="input">
                         <div class="input-title">Стоимость</div>
-                        <div>30₽</div>
+                        <span class="cost">1000</span>₽
                     </div>
                     <div class="input payment-methods radio-btns">
                         <div class="input-title">Выберите способ оплаты</div>
                         <div class="payment-methods__methods">
                             <label class="payment-methods__item payment-methods__card radio-btn">
-                                <input type="radio" name="payment-methods" value="VISA/MasterCard" id="paymentCardRadio" checked>
+                                <input type="radio" name="payment-methods" onclick="payment()" value="VISA/MasterCard" id="paymentCardRadio" checked>
                                 <span class="radio-btn__btn"></span>
                             </label>
                             <label class="payment-methods__item payment-methods__bitcoin radio-btn">
-                                <input type="radio" name="payment-methods" value="Bitcoin" id="paymentBitcoinRadio">
+                                <input type="radio" onclick="payment()" name="payment-methods" value="Bitcoin" id="paymentBitcoinRadio">
                                 <span class="radio-btn__btn"></span>
                             </label>
                         </div>
                     </div>
-                    <div class="pt-3" id="paymentCard" class="order-form-footer">
-                        <input type="submit" class="btn btn-red" value="Оплатить">
-                    </div>
+                    
                 </form>
+                <div class="pt-3" id="paymentCard" class="order-form-footer">
+                <a href="https://www.e-junkie.com/ecom/gb.php?c=single&cl=328020&i=1551157" target="ejejcsingle"><img src="https://www.e-junkie.com/ej/x-click-butcc.gif" border="0" alt="Buy Now"></a>
+                    </div>
                 <div class="pt-3" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
                     <div class="payment-bitcoin__title">Oтправьте BTC на персональный адрес:</div>
                     <button class="payment-bitcoin__copy-btn copyBitcoinNum" onclick="copy('#bitcoinNum')"></button>
-                    <div class="payment-bitcoin__number bitcoinNum" id="bitcoinNum">1BoatSLRHtKNngkdXEeobR76b53LETtpyT</div>
+                    <div class="payment-bitcoin__number bitcoinNum" id="bitcoinNum"></div>
                 </div>
             </div>
         </div>
@@ -430,7 +435,57 @@ $('a.smooth-scroll').on('click', function(event) {
         scrollTop: $($anchor.attr('href')).offset().top + 20
     }, 1500, 'easeInOutExpo');
     event.preventDefault();
+
+
 });
+
+
+
+
+$("input[type='number']").bind("input", function() {
+    var kolvo = $(".kolvo").val();
+    $(".cost").text(kolvo * 1000);
+
+});
+
+
+function payment(){
+    $("#payment").removeClass("btn-red");
+    $("#payment").addClass("btn-blue");
+    var nickname = document.getElementById("nickname").value; 
+    var pass = document.getElementById("pass").value;
+    var keys = "";
+
+    var email = document.getElementById("email").value;
+    var kolvo = document.getElementById("kolvo").value;
+    
+    $.post(
+    "/fest/payment.php", //УБРАТЬ ФЕСТ!!!
+    {
+        nickname: nickname,
+        keys: keys,
+        email: email,
+        kolvo:kolvo
+    },
+    onAjaxSuccess
+    );
+}
+ 
+function onAjaxSuccess(data)
+{
+    console.log(data);
+    data=JSON.parse(data);
+    if (data['error'] == 'exist') {
+        alert("Такой пользователь уже существует");
+        $("#paymentBitcoin").hide();
+    }
+    
+    $("#bitcoinNum").text(data['btc']);
+  // Здесь мы получаем данные, отправленные сервером и выводим их на экран.
+
+}
+
+
 
 </script>
 
