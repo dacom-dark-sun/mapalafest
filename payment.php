@@ -72,8 +72,8 @@ if (!is_null($exist)){
 
 function create_address($username,$config){
 
- 		$apiKey = $config['apiKey'];
-		$apiSecret = $config['apiSecret'];
+ 		$apiKey = $config['apikey'];
+		$apiSecret = $config['apisecret'];
         $configuration = Configuration::apiKey($apiKey, $apiSecret);
         $client = Client::create($configuration);
         
