@@ -464,7 +464,7 @@ $('a.smooth-scroll').on('click', function(event) {
 $("input[type='number']").bind("input", function() {
     var kolvo = $(".kolvo").val();
     $(".cost").text(kolvo * 1000);
-    $("#sum").text(kolvo * 1000 + ".00");
+    $("#sum").val(kolvo * 1000 + ".00");
 });
 
 $('.kolvo').val(1);
@@ -484,7 +484,7 @@ function payment(){
     $('#sum').val(kolvo * 1000 + '.00');
     $('#customerNumber').val(nickname);
     $.post(
-    "/mapalafest/payment.php", //УБРАТЬ ФЕСТ!!!
+    "/payment.php", //УБРАТЬ ФЕСТ!!!
     {
         nickname: nickname,
         pass: pass,
