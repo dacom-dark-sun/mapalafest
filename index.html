@@ -351,7 +351,7 @@
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
-                <form class="order-form inputs">
+                <div class="order-form inputs">
                     <label class="input">
                         <div class="input-title">Имя участника (username)</div>
                         <input type="text" id="nickname" placeholder="Только латинские буквы">
@@ -373,34 +373,33 @@
                         <div class="input-title">Стоимость</div>
                         <span class="cost">1000</span>₽
                     </div>
+                    
+                    <div class="continue">
+                      <button class="btn btn-blue" id="continue" onclick="payment()" >Продолжить</button>
+                    </div>
+                    
                     <div class="input payment-methods radio-btns">
                         <div class="input-title">Выберите способ оплаты</div>
                         <div class="payment-methods__methods">
                             <label class="payment-methods__item payment-methods__card radio-btn">
-                                <input type="radio" name="payment-methods" onclick="payment()" value="VISA/MasterCard" id="paymentCardRadio" checked>
+                                <input type="radio" name="payment-methods" onclick="document.getElementById('payform').submit()" value="VISA/MasterCard" id="paymentCardRadio" checked>
                                 <span class="radio-btn__btn"></span>
                             </label>
                             <label class="payment-methods__item payment-methods__bitcoin radio-btn">
-                                <input type="radio" onclick="payment()" name="payment-methods" value="Bitcoin" id="paymentBitcoinRadio">
+                                <input type="radio" onclick="$('#paymentBitcoin').show()" name="payment-methods" value="BitcoinPay" id="paymentBitcoinRadioPay">
                                 <span class="radio-btn__btn"></span>
                             </label>
                         </div>
                     </div>
                     
-                </form>
+                </div>
                 <div class="pt-3" id="paymentCard" class="order-form-footer">
-                     <form action="https://demomoney.yandex.ru/eshop.xml" method="POST">
-      
-                        <!-- Эти поля обязательные, их нельзя удалять из платежной формы =============================
-     в полях value="" в строках shopid и scid пропишите требуемые значения                 -->  
+                     <form id = "payform" action="https://demomoney.yandex.ru/eshop.xml" method="POST">
         <input name="shopId" value="153790" type="hidden">
         <input name="scid" value="557216" type="hidden">
-        <input name="customerNumber" value="Покупатель N1"><!-- Идентификатор вашего покупателя -->
-        <input name="sum" value="10.00"><!-- Сумма покупки (руб.) -->
-
-<!-- Кнопку "Оплатить", можно назвать по своему, например value="Оплатить за курсы вождения"
-    или value="Оплатить подписку на журнал" и т.д.                                        -->
-        <input type="submit" value="Оплатить">
+        <input name="customerNumber" id='customerNumber' type="hidden" value=""><!-- Идентификатор вашего покупателя -->
+        <input name="sum" id='sum' type="hidden" value=""><!-- Сумма покупки (руб.) -->
+        
         </form>
                     </div>
                 <div class="pt-3" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
@@ -467,16 +466,22 @@ $("input[type='number']").bind("input", function() {
 
 });
 
+$('.kolvo').val(1);
+$(".cost").text(1000);
+$("#continue").prop("disabled",false);    
+
 
 function payment(){
-    $("#payment").removeClass("btn-red");
-    $("#payment").addClass("btn-blue");
     var nickname = document.getElementById("nickname").value; 
     var pass = document.getElementById("pass").value;
     var email = document.getElementById("email").value;
     var kolvo = document.getElementById("kolvo").value;
-    
+    $("#continue").text("Регистрация в блокчейне ...");
+        
 
+
+    $('#sum').val(kolvo * 1000);
+    $('#customerNumber').val(nickname);
     $.post(
     "/mapalafest/payment.php", //УБРАТЬ ФЕСТ!!!
     {
@@ -495,10 +500,12 @@ function onAjaxSuccess(data)
     data=JSON.parse(data);
     if (data['error'] == '1') {
         alert(data['message']);
-        $("#paymentBitcoin").hide();
+        $("#continue").text("Продолжить");
     } else {
         $("#bitcoinNum").text(data['btc']);
         $("#amount").text(data['amount']);
+        $(".payment-methods").show();
+        $("#continue").prop("disabled",true);
     }
 }
 

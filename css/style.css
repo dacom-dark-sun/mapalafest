@@ -188,6 +188,10 @@ img {
 .radio-btn__btn{
   cursor: pointer;
 }
+
+.payment-methods{
+  display: none;
+}
 .payment-methods__card .radio-btn__btn {
   background: url(../assets/icons/pay-card-on.png) no-repeat center;
   background-size: contain;
@@ -591,6 +595,10 @@ img {
   display: inline-block;
   vertical-align: middle;
   color: #3d36aa;
+}
+
+.continue{
+  margin-bottom: 30px;
 }
 
 .payment-bitcoin__copy-btn {
