@@ -54,7 +54,7 @@ if (!is_null($exist)){
 	$data['kolvo'] = $_POST['kolvo'];
 	$data['email'] = $_POST['email'];
 
-	$btc = create_address($data['nickname']);
+	$btc = create_address($data['nickname'],$config);
 	$data['btc_address'] = $btc;
 	$data['rate'] = get_btc_rate();
 	$data['amount_btc'] =  round($data['kolvo'] * 1000 / $data['rate'],5);
@@ -70,8 +70,8 @@ if (!is_null($exist)){
 
 
 
-function create_address($username){
-global $config;
+function create_address($username,$config){
+
  		$apiKey = $config['apiKey'];
 		$apiSecret = $config['apiSecret'];
         $configuration = Configuration::apiKey($apiKey, $apiSecret);
