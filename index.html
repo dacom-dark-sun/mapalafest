@@ -334,6 +334,9 @@
             <div class="col-12 mb-3 col-md-3">
                 <div class="footer__powered-by">При поддержке сообщества <a target="_blank" href="https://mapala.net">DACom Mapala</a></div>
             </div>
+             <div class="col-xs-12 col-lg-12 col-md-12">
+                <div class="footer__powered-by"><center>ИП Талагаева Е.Е. ИНН:661221695186 ОГРНИП: 317665800136642, support@mapala.net</center></div>
+            </div>
 
         </div>
     </div>
@@ -350,12 +353,12 @@
             <div class="modal-body">
                 <form class="order-form inputs">
                     <label class="input">
-                        <div class="input-title">Имя участника (nickname)</div>
+                        <div class="input-title">Имя участника (username)</div>
                         <input type="text" id="nickname" placeholder="Только латинские буквы">
                     </label>
                     <label class="input">
                         <div class="input-title">Введите свой пароль</div>
-                        <input id="pass" type="password" placeholder="Пароль">
+                        <input id="pass" type="password" placeholder="Не менее 12 символов">
                     </label>
 
                     <label class="input">
@@ -386,10 +389,22 @@
                     
                 </form>
                 <div class="pt-3" id="paymentCard" class="order-form-footer">
-                <a href="https://www.e-junkie.com/ecom/gb.php?c=single&cl=328020&i=1551157" target="ejejcsingle"><img src="https://www.e-junkie.com/ej/x-click-butcc.gif" border="0" alt="Buy Now"></a>
+                     <form action="https://demomoney.yandex.ru/eshop.xml" method="POST">
+      
+                        <!-- Эти поля обязательные, их нельзя удалять из платежной формы =============================
+     в полях value="" в строках shopid и scid пропишите требуемые значения                 -->  
+        <input name="shopId" value="153790" type="hidden">
+        <input name="scid" value="557216" type="hidden">
+        <input name="customerNumber" value="Покупатель N1"><!-- Идентификатор вашего покупателя -->
+        <input name="sum" value="10.00"><!-- Сумма покупки (руб.) -->
+
+<!-- Кнопку "Оплатить", можно назвать по своему, например value="Оплатить за курсы вождения"
+    или value="Оплатить подписку на журнал" и т.д.                                        -->
+        <input type="submit" value="Оплатить">
+        </form>
                     </div>
                 <div class="pt-3" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
-                    <div class="payment-bitcoin__title">Oтправьте BTC на персональный адрес:</div>
+                    <div class="payment-bitcoin__title">Oтправьте <span id="amount"></span> BTC на персональный адрес:</div>
                     <button class="payment-bitcoin__copy-btn copyBitcoinNum" onclick="copy('#bitcoinNum')"></button>
                     <div class="payment-bitcoin__number bitcoinNum" id="bitcoinNum"></div>
                 </div>
@@ -458,16 +473,15 @@ function payment(){
     $("#payment").addClass("btn-blue");
     var nickname = document.getElementById("nickname").value; 
     var pass = document.getElementById("pass").value;
-    var keys = "";
-
     var email = document.getElementById("email").value;
     var kolvo = document.getElementById("kolvo").value;
     
+
     $.post(
-    "/fest/payment.php", //УБРАТЬ ФЕСТ!!!
+    "/mapalafest/payment.php", //УБРАТЬ ФЕСТ!!!
     {
         nickname: nickname,
-        keys: keys,
+        pass: pass,
         email: email,
         kolvo:kolvo
     },
@@ -479,14 +493,13 @@ function onAjaxSuccess(data)
 {
     console.log(data);
     data=JSON.parse(data);
-    if (data['error'] == 'exist') {
-        alert("Такой пользователь уже существует");
+    if (data['error'] == '1') {
+        alert(data['message']);
         $("#paymentBitcoin").hide();
+    } else {
+        $("#bitcoinNum").text(data['btc']);
+        $("#amount").text(data['amount']);
     }
-    
-    $("#bitcoinNum").text(data['btc']);
-  // Здесь мы получаем данные, отправленные сервером и выводим их на экран.
-
 }
 
 
