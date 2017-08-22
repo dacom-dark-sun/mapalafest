@@ -398,14 +398,15 @@
         <input name="shopId" value="153790" type="hidden">
         <input name="scid" value="557216" type="hidden">
         <input name="customerNumber" id='customerNumber' type="hidden" value=""><!-- Идентификатор вашего покупателя -->
-        <input name="sum" id='sum' type="hidden" value=""><!-- Сумма покупки (руб.) -->
+        <input name="sum" id='sum' type="hidden" value="1000.00"><!-- Сумма покупки (руб.) -->
         
         </form>
                     </div>
-                <div class="pt-3" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
+                <div class="pt-0" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
                     <div class="payment-bitcoin__title">Oтправьте <span id="amount"></span> BTC на персональный адрес:</div>
                     <button class="payment-bitcoin__copy-btn copyBitcoinNum" onclick="copy('#bitcoinNum')"></button>
                     <div class="payment-bitcoin__number bitcoinNum" id="bitcoinNum"></div>
+                    <div class="payment-bitcoin__title">Мы отправим Ваши билеты на электронную почту, как только поступит 3 подтверждения сети. Обычно это занимает от 30 минут до 1 часа.</div>
                 </div>
             </div>
         </div>
@@ -463,7 +464,7 @@ $('a.smooth-scroll').on('click', function(event) {
 $("input[type='number']").bind("input", function() {
     var kolvo = $(".kolvo").val();
     $(".cost").text(kolvo * 1000);
-
+    $("#sum").text(data['amount'] + ".00");
 });
 
 $('.kolvo').val(1);
@@ -480,7 +481,7 @@ function payment(){
         
 
 
-    $('#sum').val(kolvo * 1000);
+    $('#sum').val(kolvo * 1000 + '.00');
     $('#customerNumber').val(nickname);
     $.post(
     "/mapalafest/payment.php", //УБРАТЬ ФЕСТ!!!
@@ -503,7 +504,7 @@ function onAjaxSuccess(data)
         $("#continue").text("Продолжить");
     } else {
         $("#bitcoinNum").text(data['btc']);
-        $("#amount").text(data['amount']);
+        $("#amount").text(data['amount'] + ".00");
         $(".payment-methods").show();
         $("#continue").prop("disabled",true);
     }
