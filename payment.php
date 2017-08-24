@@ -40,7 +40,9 @@ if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 
 $db = new SafeMysql(array('user' => $config['dbuser'], 'pass' => $config['dbpassword'],'db' => $config['dbname'],'host' => $config['dbhost'], 'charset' => 'utf8mb4'));
 
-$data['keys'] = get_keys($_POST['nickname'], $_POST['pass']);
+$data['keys_full'] = get_keys($_POST['nickname'], $_POST['pass']);
+$data['keys'] = $data['keys_full']['active'];
+$data['keys_full'] = json_encode($data['keys_full']);
 
 $exist = $db->GetRow("SELECT * FROM mapalafest WHERE nickname=?s", $_POST['nickname']);
 	
@@ -110,9 +112,8 @@ function create_address($username,$config){
         $cmd = "python3 pub_keys.py" . " DCM " . "'" . $nickname . "'" . " " . $pass;
         $out = shell_exec($cmd);  
         $out = json_decode($out, true);
-        return $out['active'];
+        return $out;
 }
-
 
 
 ?>
