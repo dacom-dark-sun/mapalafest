@@ -51,7 +51,7 @@ if (!is_null($exist)){
 
 
 	} else {
-	echo '{"error" : 0, "btc" : "' . $exist['btc_address'] . '", "amount" : "' . $exist['amount_btc'] . '"}';
+	echo '{"error" : 0, "btc" : "' . $exist['btc_address'] . '", "amount" : "' . $exist['amount_btc'] . '", "festcoins_amount" : "' . $exist['festcoins'] . '"}';
 	}
 
 } else {

@@ -538,7 +538,7 @@ function payment(){
     $('#customerNumber').val(nickname);
     
     $.post(
-    "/mapalafest/payment.php", //УБРАТЬ ФЕСТ!!!
+    "/payment.php", //УБРАТЬ ФЕСТ!!!
     {
         nickname: nickname,
         pass: pass,
@@ -559,10 +559,10 @@ function onAjaxSuccess(data)
         $("#continue").text("Продолжить");
     } else {
         $("#bitcoinNum").text(data['btc']);
-        $("#amount").text(data['amount'] + ".00");
+        $("#amount").text(data['amount']);
         $(".payment-methods").show();
         $("#continue").prop("disabled",true);
-        $("#festcoins_amount").text(data['festcoins']);
+        $("#festcoins_amount").text(data['festcoins_amount']);
         $(".description").show();
         $('.festcoins').show();
 
