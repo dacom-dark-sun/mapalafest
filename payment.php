@@ -13,11 +13,7 @@ use Coinbase\Wallet\Resource\Transaction;
 use Coinbase\Wallet\Value\Money;
 use Coinbase\Wallet\Client;
 use Coinbase\Wallet\Configuration;
-$username = 'username';
-$key = 'key';
-$kolvo = 1;
-$cmd = "qr " . $username . " " . "'" . $username . " " . $key . " " . $kolvo . "'" . ">" . " ../tickets/" . $username . ".png";
- echo $cmd;
+
 
 if (array_key_exists('ref', $_POST)){
    $ref = $_POST['ref'];
