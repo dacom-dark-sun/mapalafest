@@ -512,7 +512,7 @@ img {
   }
   .sticky-nav__menu li {
     -ms-flex-preferred-size: 100%;
-        
+        flex-basis: 0 !important;
   }
 }
 
