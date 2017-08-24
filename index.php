@@ -1,10 +1,12 @@
 
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CryptoFest</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,10 +15,11 @@
     script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
     -->
     <link href="css/style.css?v=2" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-
+<script src='ya.js'></script>
 
 <header class="header">
 
@@ -99,7 +102,7 @@
                 <div class="map-current row main_scena" style="">
                     <img src="img/4.svg" alt="">
                     <div class="text-center map-current__title">Главная сцена</div>
-                    <p>Лекции о цифровой экономике, криптовалютах и будущем, которое уже здесь.</p>
+                    <p>Лекции о цифровой экономике, криптовалютах и будущем, которое уже здесь</p>
 
    
                 </div>
@@ -107,14 +110,14 @@
                 <div class="map-current row tanspol" style="">
                     <img src="img/2.svg" alt="">
                     <div class="text-center map-current__title ">Танцпол</div>
-                    <p>Качественная этническая и электронная музыка расслабят после получения потока информации</p>
+                    <p>Качественная этническая и электронная музыка расслабит после погружения в потоки новой информации</p>
 
                 </div>
 
                 <div class="map-current row children_place" style="">
                     <img src="img/1.svg" alt="">
                     <div class="text-center map-current__title ">Детская площадка</div>
-                    <p>Дети проведут время с детьми и под присмотром, пока взрослые учатся или отдыхают.</p>
+                    <p>Дети проведут время с детьми и под присмотром, пока взрослые учатся или отдыхают</p>
    
                 </div>
 
@@ -137,28 +140,23 @@
             </div>
             <div class="col-12 col-lg">
                 <div class="map__map" style="">
-                    <span class="map__map1-text">детская площадка</span>
                      <img class= "img-in-oval img-in-oval5" src="img/1.svg" alt="">
    
 
-                    <span class="map__map2-text">танцпол</span>
                     <img class= "img-in-oval img-in-oval1" src="img/2.svg" alt="">
                     <span class="oval1"></span>
 
-                    <span class="map__map3-text">мужские игры</span>
                     <img class= "img-in-oval img-in-oval2" src="img/3.svg" alt="">
                     <span class="oval2"></span>
 
 
-                    <span class="map__map4-text">главная сцена</span>
                     <img class= "img-in-oval img-in-oval3" src="img/4.svg" alt="">
                     <span class="oval3"></span>
 
-                    <span class="map__map5-text">ярмарка</span>
                     <img class= "img-in-oval img-in-oval4" src="img/5.svg" alt="">
                     <span class="oval4"></span>
 
-                    <span class="map__map6-text">вход</span>
+                    <span class="map__map6-text">Вход в другой мир</span>
                     <img src="img/ilustration5.svg" alt="Карта">
                     <span class="oval5"></span>
 
@@ -167,6 +165,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 <section class="who-welcome" id="who-welcome">
@@ -195,7 +195,7 @@
                 <div class="row row-reset justify-content-between">
 
                   <div class="who-welcome-item__content col">
-                    <h4>ПРЕДПРИНИМАТЕЙ</h4>
+                    <h4>ПРЕДПРИНИМАТЕЛЕЙ</h4>
                     <h6>Возможности для бизнеса</h6>
                     <p>Как применить новые технологии в бизнесе и открыть новые рынки в Голубом Океане Цифровой Экономики.</p>
                   </div>
@@ -212,9 +212,9 @@
             <div class="col-12 col-xs-12 col-lg-8 guests">
                 <img class= "img_hide" src="img/5.jpg" alt="">
                 <div class="who-welcome-item__content">
-                    <h4>IT-специалистов</h4>
+                    <h4>IT-СПЕЦИАЛИСТОВ</h4>
                     <h6>Твое время пришло</h6>
-                    <p>Люди идут в новый Золотой Век, скорость движения - зависит от твоих 10 пальцев и головы. </p>
+                    <p>Люди идут в новый Золотой Век, скорость движения зависит от твоих 10 пальцев и головы. </p>
                 </div>
                 <div class="guests3">
                 </div>
@@ -226,7 +226,7 @@
                 <div class="row row-reset justify-content-between">
 
                   <div class="who-welcome-item__content col">
-                    <h4>Всех, кто в ТРЕНДЕ</h4>
+                    <h4>ВСЕХ, КТО В ТРЕНДЕ</h4>
                     <h6>Слышал о криптовалютах?</h6>
                     <p>Ты увидишь реальное применение, соприкоснешься с новыми технологиями и поймешь, зачем это нужно.</p>
                   </div>
@@ -257,7 +257,7 @@
                 <ul>
                     <li><span>10 часов лекций от спикеров со всей страны</span></li>
                     <li><span>Горячий танцпол с разносторонней музыкой</span></li>
-                    <li><span>100 FestCoins, которые можно потратить на сувениры или еду</span></li>
+                    <li><span>100 FestCoins, которые можно обменять на сувениры или еду</span></li>
                     <li><span>Мастер-классы по йоге, альтернативной медицине, педагогике, и многие другие</span></li>
                     <li><span>Веревочный парк, мужские игры и соревнования</span></li>
                     <li><span>Ярмарка мастеров</span></li>
@@ -266,13 +266,20 @@
                 <div class="plan__price">1000 RUB</div>
 
                 <button class="btn btn-red mt-3" data-toggle="modal" data-target="#exampleModal">Участвовать</button>
-                <div class="timer" style="padding-top: 20px; display: none">
-                    <script src="http://megatimer.ru/s/a4588676d206f933ee3a6a8d16e9f9ab.js"></script>  
-                    <p> до увеличения цены</p>  
-                </div>
+                
             </div>
             <div class="plan-vip col-xs-12 col-lg-6">
-                <h1>Не включено, или за доп. плату:</h1>
+                 <h1>FESTCOINS для Волонтеров:</h1>
+                <ul>
+                    <li><span>++ Приглашай друзей и зарабатывай FESTCOINS</span></li>
+                    <li><span>++ Каждый приглашенный гость = 10 FESTCOINS</span></li>
+                    <li><span>++ Обмен FESTCOINS на деньги после завершения фестиваля</span></li>
+                    <li><span>++ Стоимость 1 FESTCOIN будет оглашена перед началом фестиваля</span></li>
+                    
+                </ul>
+                <br>
+                <br>
+                <h1>За доп. плату на месте:</h1>
                 <ul>
                     <li><span>-- Питание</span></li>
                     <li><span>-- Место отдыха в VIP-домике</span></li>
@@ -309,7 +316,7 @@
 <section class="address-map" id="address-map">
     <h1 class="section-title">Как добраться</h1>
     <center><h6>Территория Парка Сказов, пос. Арамиль, в атмосфере сказочных декораций и уникального ансамбля русского зодчества.</h6></center><br>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad726a4d12e5192fc6eea0364addf8c29b7a9c98dc6f89182f4f2f75a6f155b69&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+     <iframe src="https://snazzymaps.com/embed/10586" width="100%" height="450px" style="border:none;"></iframe>
 </section>
 
 
@@ -331,6 +338,9 @@
             <div class="col-12 mb-3 col-md-3">
                 <div class="footer__powered-by">При поддержке сообщества <a target="_blank" href="https://mapala.net">DACom Mapala</a></div>
             </div>
+             <div class="col-xs-12 col-lg-12 col-md-12">
+                <div class="footer__powered-by"><center>ИП Талагаева Е.Е. ИНН:661221695186 ОГРНИП: 317665800136642, support@mapala.net</center></div>
+            </div>
 
         </div>
     </div>
@@ -345,54 +355,87 @@
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
-                <form class="order-form inputs">
+                <div class="order-form inputs">
                     <label class="input">
-                        <div class="input-title">Имя участника (nickname)</div>
-                        <input type="text" placeholder="Только латинские буквы">
+                        <div class="input-title">Имя участника (username)</div>
+                        <input type="text" id="nickname" placeholder="Только латинские буквы">
                     </label>
                     <label class="input">
                         <div class="input-title">Введите свой пароль</div>
-                        <input type="password" placeholder="Пароль">
+                        <input id="pass" type="password" placeholder="Не менее 12 символов">
                     </label>
 
                     <label class="input">
                         <div class="input-title">Введите свой Email</div>
-                        <input type="email" placeholder="Email">
+                        <input type="email" id="email" placeholder="Email">
                     </label>
                     <div class="input">
                         <div class="input-title">Количество</div>
-                             <input class="kolvo" type="number" min="1" value="1" style="max-width: 50px">
+                             <input class="kolvo" id="kolvo" type="number" min="1" value="1" style="max-width: 50px">
                     </div>
                     <div class="input">
                         <div class="input-title">Стоимость</div>
-                        <span class="cost">1000</span>₽
+                        <span class="cost">1000.00</span> ₽
                     </div>
+                    
+                    <div class="continue">
+                      <button class="btn btn-blue" id="continue" onclick="payment()" >Продолжить</button>
+
+                    </div>
+                    
                     <div class="input payment-methods radio-btns">
                         <div class="input-title">Выберите способ оплаты</div>
                         <div class="payment-methods__methods">
                             <label class="payment-methods__item payment-methods__card radio-btn">
-                                <input type="radio" name="payment-methods" value="VISA/MasterCard" id="paymentCardRadio" checked>
+                                <input type="radio" name="payment-methods" onclick="document.getElementById('payform').submit()" value="VISA/MasterCard" id="paymentCardRadio" checked>
                                 <span class="radio-btn__btn"></span>
                             </label>
                             <label class="payment-methods__item payment-methods__bitcoin radio-btn">
-                                <input type="radio" name="payment-methods" value="Bitcoin" id="paymentBitcoinRadio">
+                                <input type="radio" onclick="$('#paymentBitcoin').show()" name="payment-methods" value="BitcoinPay" id="paymentBitcoinRadioPay">
                                 <span class="radio-btn__btn"></span>
                             </label>
                         </div>
                     </div>
-                    <div class="pt-3" id="paymentCard" class="order-form-footer">
-                        <input type="submit" class="btn btn-red" value="Оплатить">
+                    
+                <div class="pt-0" id="paymentCard" class="order-form-footer">
+                     <form id = "payform" action="https://demomoney.yandex.ru/eshop.xml" method="POST">
+        <input name="shopId" value="153790" type="hidden">
+        <input name="scid" value="557216" type="hidden">
+        <input name="customerNumber" id='customerNumber' type="hidden" value=""><!-- Идентификатор вашего покупателя -->
+        <input name="sum" id='sum' type="hidden" value="1000.00"><!-- Сумма покупки (руб.) -->
+        
+        </form>
                     </div>
-                </form>
-                <div class="pt-3" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
-                    <div class="payment-bitcoin__title">Oтправьте BTC на персональный адрес:</div>
+                <div class="pt-0" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
+                    <div class="payment-bitcoin__title">Oтправьте <span id="amount"></span> BTC на персональный адрес:</div>
                     <button class="payment-bitcoin__copy-btn copyBitcoinNum" onclick="copy('#bitcoinNum')"></button>
-                    <div class="payment-bitcoin__number bitcoinNum" id="bitcoinNum">1BoatSLRHtKNngkdXEeobR76b53LETtpyT</div>
+                    <div class="payment-bitcoin__number bitcoinNum" id="bitcoinNum"></div>
+                    <div class="payment-bitcoin__title">Мы отправим Ваши билеты на электронную почту, как только поступит 3 подтверждения сети. Обычно это занимает от 30 минут до 1 часа.</div>
                 </div>
+
+                <div class="description">
+                      <div>Волонтерам: повторно вводите свои данные для отображения FESTCOINS на счете.</div><br>
+                      <div>Ссылка для передачи другу: <div class = "link"></div></div>
+                      </div>
+                      <br>
+                      <div class="festcoins">
+                      <div>FESTCOINS: <span id="festcoins_amount">00.00</span></div>
+                                            </div>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
+<?php if (!array_key_exists("ref", $_GET)) 
+        {
+           $ref="0";
+        } 
+    else {
+         $ref =$_GET['ref'];
+
+    };
+    ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -435,13 +478,67 @@ $('a.smooth-scroll').on('click', function(event) {
         scrollTop: $($anchor.attr('href')).offset().top + 20
     }, 1500, 'easeInOutExpo');
     event.preventDefault();
+
+
 });
+
+
 
 
 $("input[type='number']").bind("input", function() {
     var kolvo = $(".kolvo").val();
-    $(".cost").text(kolvo * 1000);
+    $(".cost").text(kolvo * 1000 + ".00");
+    $("#sum").val(kolvo * 1000 + ".00");
 });
+
+$('.kolvo').val(1);
+$(".cost").text(1000.00);
+$("#continue").prop("disabled",false);    
+
+
+function payment(){
+    var nickname = document.getElementById("nickname").value; 
+    var pass = document.getElementById("pass").value;
+    var email = document.getElementById("email").value;
+    var kolvo = document.getElementById("kolvo").value;
+    $("#continue").text("Регистрация в блокчейне DACom...");
+    $('.link').text('https://fest.mapala/?ref=' + nickname);    
+
+
+    $('#sum').val(kolvo * 1000 + '.00');
+    $('#customerNumber').val(nickname);
+    
+    $.post(
+    "/mapalafest/payment.php", //УБРАТЬ ФЕСТ!!!
+    {
+        nickname: nickname,
+        pass: pass,
+        email: email,
+        kolvo:kolvo,
+        ref: <?= "'" . $ref . "'" ?>
+    },
+    onAjaxSuccess
+    );
+}
+ 
+function onAjaxSuccess(data)
+{
+    console.log(data);
+    data=JSON.parse(data);
+    if (data['error'] == '1') {
+        alert(data['message']);
+        $("#continue").text("Продолжить");
+    } else {
+        $("#bitcoinNum").text(data['btc']);
+        $("#amount").text(data['amount'] + ".00");
+        $(".payment-methods").show();
+        $("#continue").prop("disabled",true);
+        $("#festcoins_amount").text(data['festcoins']);
+        $(".description").show();
+        $('.festcoins').show();
+
+    }
+}
 
 
 
