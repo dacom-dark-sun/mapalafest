@@ -416,7 +416,7 @@
                         <div class="input-title">Выберите способ оплаты</div>
                         <div class="payment-methods__methods">
                             <label class="payment-methods__item payment-methods__card radio-btn">
-                                <input type="radio" name="payment-methods" onclick="//document.getElementById('payform').submit()" value="VISA/MasterCard" id="paymentCardRadio" checked>
+                                <input type="radio" name="payment-methods" onclick="document.getElementById('payform').submit()" value="VISA/MasterCard" id="paymentCardRadio" checked>
                                 <span class="radio-btn__btn"></span>
                             </label>
                             <label class="payment-methods__item payment-methods__bitcoin radio-btn">
