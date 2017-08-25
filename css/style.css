@@ -200,7 +200,7 @@ img {
 }
 
 .payment-methods__card input[type="radio"]:checked ~ .radio-btn__btn {
-  background-image: url(../assets/icons/pay-card.png);
+  background-image: url(../assets/icons/pay-card-on.png);
 }
 
 .payment-methods__bitcoin .radio-btn__btn {
