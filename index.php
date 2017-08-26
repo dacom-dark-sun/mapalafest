@@ -431,8 +431,6 @@
         <input name="shopId" value="153790" type="hidden">
         <input name="scid" value="146122" type="hidden">
         <input name="customerNumber" id='customerNumber' type="hidden" value=""><!-- Идентификатор вашего покупателя -->
-        <input name="orderNumber" id='orderNumber' type="hidden" value=""><!-- Идентификатор вашего покупателя -->
-        
         <input name="sum" id='sum' type="hidden" value="1000.00"><!-- Сумма покупки (руб.) -->
         
         </form>
@@ -540,7 +538,7 @@ function payment(){
 
     $('#sum').val(kolvo * 1000 + '.00');
     $('#customerNumber').val(nickname);
-    $('#orderNumber').val('MapalaFest');
+    
     $.post(
     "/payment.php", //УБРАТЬ ФЕСТ!!!
     {
