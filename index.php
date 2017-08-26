@@ -429,13 +429,15 @@
                 <div class="pt-0" id="paymentCard" class="order-form-footer">
                      <form id = "payform" action="https://money.yandex.ru/eshop.xml" method="POST">
         <input name="shopId" value="153790" type="hidden">
-        <input name="scid" value="557216" type="hidden">
+        <input name="scid" value="146122" type="hidden">
         <input name="customerNumber" id='customerNumber' type="hidden" value=""><!-- Идентификатор вашего покупателя -->
+        <input name="customerNumber" id='orderNumber' type="hidden" value=""><!-- Идентификатор вашего покупателя -->
+        
         <input name="sum" id='sum' type="hidden" value="1000.00"><!-- Сумма покупки (руб.) -->
         
         </form>
 
-        
+
                     </div>
                 <div class="pt-0" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
                     <div class="payment-bitcoin__title">Oтправьте <span id="amount"></span> BTC на персональный адрес:</div>
@@ -538,7 +540,7 @@ function payment(){
 
     $('#sum').val(kolvo * 1000 + '.00');
     $('#customerNumber').val(nickname);
-    
+    $('#orderNumber').val('MapalaFest');
     $.post(
     "/payment.php", //УБРАТЬ ФЕСТ!!!
     {
