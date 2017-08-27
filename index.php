@@ -344,13 +344,25 @@
     </div>
 </section>
 
+<section class="social-networks" id="social-networks">
+    <div class="container">
+        <div class="section-title">Следи за новостями в VK</div>
+        <div class="row align-items-center justify-content-center friends">
+            <div class="col-auto col-fix partners-item mb-3">
+                <a target="_blank" href="https://vk.com/cryptofest"><img src="img/vk.jpg" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <section class="address-map" id="address-map">
     <h1 class="section-title">Как добраться</h1>
     <center><h6>Территория Парка Сказов, пос. Арамиль, в атмосфере сказочных декораций и уникального ансамбля русского зодчества.</h6></center><br>
-     <center><p>Для Вашего удобства, будет организованы регулярные автобусы из центра г. Екатеринбург</p></center><br>
+     <center><p>Для Вашего удобства, будет организованы курсирующие автобусы из центра г. Екатеринбург</p></center><br>
      <iframe src="https://snazzymaps.com/embed/10586" width="100%" height="450px" style="border:none;"></iframe>
 </section>
+
 
 
 <footer class="footer">
