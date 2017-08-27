@@ -345,6 +345,7 @@
 <section class="address-map" id="address-map">
     <h1 class="section-title">Как добраться</h1>
     <center><h6>Территория Парка Сказов, пос. Арамиль, в атмосфере сказочных декораций и уникального ансамбля русского зодчества.</h6></center><br>
+     <center><p>Для Вашего удобства, будет организованы регулярные автобусы из центра г. Екатеринбург</p></center><br>
      <iframe src="https://snazzymaps.com/embed/10586" width="100%" height="450px" style="border:none;"></iframe>
 </section>
 
