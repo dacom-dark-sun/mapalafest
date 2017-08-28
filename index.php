@@ -131,7 +131,7 @@
                 <div class="map-current row main_scena" style="">
                     <img src="img/4.svg" alt="">
                     <div class="text-center map-current__title">Главная сцена</div>
-                    <p>120 рублей за доллар этой зимой. Почему цифровая экономика?</p>
+                    <p>120 рублей за доллар этой зимой. Почему цифровая экономика? Почему это никто не сможет остановить?</p>
 
    
                 </div>
