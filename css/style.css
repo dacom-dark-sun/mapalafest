@@ -1069,6 +1069,7 @@ h2 {
 }
 
 .plan-standart {
+  text-align: left;
   background: #3d36aa;
   padding: 60px;
 }
@@ -1080,6 +1081,7 @@ h2 {
 .plan-vip {
   background: #f25765;
   padding: 60px;
+  text-align: left;
 }
 
 .plan-vip li {
