@@ -346,7 +346,7 @@
         <div class="section-title">Следи за новостями в VK</div>
         <div class="row align-items-center justify-content-center friends">
             <div class="col-auto col-fix partners-item mb-3">
-                <a target="_blank" href="https://vk.com/cryptofest"><img src="img/vk.jpg" alt=""></a>
+                <a target="_blank" href="https://vk.com/mapalafest2017"><img src="img/vk.jpg" alt=""></a>
             </div>
 
         </div>
@@ -381,7 +381,7 @@
                 <div class="footer__powered-by">При поддержке сообщества <a target="_blank" href="https://mapala.net">DACom Mapala</a></div>
             </div>
              <div class="col-xs-12 col-lg-12 col-md-12">
-                <div class="footer__powered-by"><center>ИП Талагаева Е.Е. ИНН:661221695186 ОГРНИП: 317665800136642, support@mapala.net</center></div>
+                <div class="footer__powered-by"><center></center></div>
             </div>
 
         </div>
