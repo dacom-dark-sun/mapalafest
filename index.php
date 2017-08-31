@@ -83,7 +83,7 @@
                     <i class="header-title__year">2017</i>
                 </div>
                 <div class="header-lead">
-                    <p>Музыкально-образовательный фестиваль Цифровой Экономики и осознанных людей</p>
+                    <p>Музыкально-образовательный фестиваль Цифровой Экономики для осознанных людей</p>
                     <button class="btn btn-red mt-3" data-toggle="modal" data-target="#exampleModal">Участвовать</button>
                 </div>
             </div>
