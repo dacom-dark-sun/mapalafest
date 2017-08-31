@@ -83,8 +83,8 @@
                     <i class="header-title__year">2017</i>
                 </div>
                 <div class="header-lead">
-                    <p>Следующий финансовый кризис сотрет все. Здесь твой вход в справедливый цифровой мир. Поторопись войти.</p>
-                    <button class="btn btn-red mt-3" data-toggle="modal" data-target="#exampleModal">Войти</button>
+                    <p>Музыкально-образовательный фестиваль Цифровой Экономики и осознанных людей</p>
+                    <button class="btn btn-red mt-3" data-toggle="modal" data-target="#exampleModal">Участвовать</button>
                 </div>
             </div>
         </div>
