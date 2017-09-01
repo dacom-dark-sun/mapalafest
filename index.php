@@ -336,6 +336,9 @@
             <div class="col-auto col-fix partners-item mb-3">
                 <img src="img/dobrolubov.jpg" alt="">
             </div>
+             <div class="col-auto col-fix partners-item mb-3">
+                <img src="img/partner5.png" alt="">
+            </div>
 
         </div>
     </div>
