@@ -271,6 +271,13 @@ background: #191919;
   padding-bottom: 20px;
 }
 
+.answer{
+  display: none;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 .header-top__place {
   font-family: 'RFKrabuler', sans-serif;
   font-size: 24px;

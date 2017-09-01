@@ -131,7 +131,7 @@
                 <div class="map-current row main_scena" style="">
                     <img src="img/4.svg" alt="">
                     <div class="text-center map-current__title">Главная сцена</div>
-                    <p>120 рублей за доллар этой зимой. Почему цифровая экономика? Почему это никто не сможет остановить?</p>
+                    <p>Почему цифровая экономика? Почему это никто не сможет остановить?</p>
 
    
                 </div>
@@ -212,7 +212,7 @@
                 <div class="who-welcome-item__content">
                       <h4>СТУДЕНТОВ</h4>
                       <h6>Твое будущее - здесь</h6>
-                      <p>Ты чувствуешь, что в мире что-то не так. Здесь ты встретишься с единомышленниками.</p>
+                      <p>Здесь ты встретишься с единомышленниками, которые думают о будущем и создают его</p>
                 </div>
                
             </div>
@@ -291,27 +291,19 @@
                     <li><span>Ты оценишь работы Уральских Мастеров на Ярмарке</span></li>
                     <li><span>Ты получишь место для установки палатки</span></li>
                  </ul>
-                <div class="plan__price">1000 RUB</div>
+                <div class="plan__price">БЕСПЛАТНО</div>
 
                 <button class="btn btn-red mt-3" data-toggle="modal" data-target="#exampleModal">Участвовать</button>
                 
             </div>
             <div class="plan-vip col-xs-12 col-lg-6">
-                 <h1>FESTCOINS для Агентов:</h1>
-                <ul>
-                    <li><span>++ Приглашай друзей и зарабатывай FESTCOINS</span></li>
-                    <li><span>++ Каждый приглашенный гость = 10 FESTCOINS</span></li>
-                    <li><span>++ Обмен FESTCOINS на деньги после завершения фестиваля</span></li>
-                    <li><span>++ Стоимость 1 FESTCOIN будет оглашена перед началом фестиваля</span></li>
-                    
-                </ul>
                 <br>
                 <br>
                 <h1>За доп. плату на месте:</h1>
                 <ul>
                     <li><span>-- Питание</span></li>
                     <li><span>-- Место отдыха в домике</span></li>
-                    <li><span>-- Персональные консультации бизнесу</span></li>
+                    <li><span>-- Консультации бизнесу</span></li>
                 </ul>
             
             </div>
@@ -401,75 +393,37 @@
             </button>
             <div class="modal-body">
                 <div class="order-form inputs">
+                    <div>Стоимость: БЕСПЛАТНО</div>
+                    <br>    
                     <label class="input">
-                        <div class="input-title">Имя участника (username)</div>
-                        <input type="text" id="nickname" placeholder="Только латинские буквы">
+                        <div class="input-title">Имя, Фамилия</div>
+                        <input type="text" id="nickname" placeholder="Позвольте с Вами познакомиться ;-)">
                     </label>
                     <label class="input">
-                        <div class="input-title">Введите свой пароль</div>
-                        <input id="pass" type="password" placeholder="Не менее 12 символов">
+                        <div class="input-title">Телефон</div>
+                        <input id="phone" type="text" placeholder="">
                     </label>
 
                     <label class="input">
-                        <div class="input-title">Введите свой Email</div>
-                        <input type="email" id="email" placeholder="Email">
+                        <div class="input-title">Email</div>
+                        <input type="email" id="email" placeholder="">
                     </label>
                     <div class="input">
-                        <div class="input-title">Количество</div>
+                        <div class="input-title">Сколько друзей возьмешь с собой</div>
                              <input class="kolvo" id="kolvo" type="number" min="1" value="1" style="max-width: 50px">
-                    </div>
-                    <div class="input">
-                        <div class="input-title">Стоимость</div>
-                        <span class="cost">1000.00</span> ₽
-                    </div>
+                        </div>
+                    
                     
                     <div class="continue">
-                      <button class="btn btn-blue" id="continue" onclick="payment()" >Продолжить</button>
+                      <button class="btn btn-blue" id="continue" onclick="payment()" >Участвовать</button>
 
                     </div>
                     
-                    <div class="input payment-methods radio-btns">
-                        <div class="input-title">Выберите способ оплаты</div>
-                        <div class="payment-methods__methods">
-                            <label class="payment-methods__item payment-methods__card radio-btn">
-                                <input type="radio" name="payment-methods" onclick="document.getElementById('payform').submit()" value="VISA/MasterCard" id="paymentCardRadio" checked>
-                                <span class="radio-btn__btn"></span>
-                            </label>
-                            <label class="payment-methods__item payment-methods__bitcoin radio-btn">
-                                <input type="radio" onclick="$('#paymentBitcoin').show()" name="payment-methods" value="BitcoinPay" id="paymentBitcoinRadioPay">
-                                <span class="radio-btn__btn"></span>
-                            </label>
-                        </div>
-                    </div>
                     
-                <div class="pt-0" id="paymentCard" class="order-form-footer">
-                     <form id = "payform" action="https://money.yandex.ru/eshop.xml" method="POST">
-        <input name="shopId" value="153790" type="hidden">
-        <input name="scid" value="146122" type="hidden">
-        <input name="customerNumber" id='customerNumber' type="hidden" value=""><!-- Идентификатор вашего покупателя -->
-        <input name="sum" id='sum' type="hidden" value="1000.00"><!-- Сумма покупки (руб.) -->
-        
-        </form>
-
-
-                    </div>
-                <div class="pt-0" id="paymentBitcoin" style="display: none;" class="order-form-footer payment-bitcoin">
-                    <div class="payment-bitcoin__title">Oтправьте <span id="amount"></span> BTC на персональный адрес:</div>
-                    <button class="payment-bitcoin__copy-btn copyBitcoinNum" onclick="copy('#bitcoinNum')"></button>
-                    <div class="payment-bitcoin__number bitcoinNum" id="bitcoinNum"></div>
-                    <div class="payment-bitcoin__title">Мы отправим Ваши билеты на электронную почту, как только поступит 3 подтверждения сети. Обычно это занимает от 30 минут до 1 часа.</div>
                 </div>
+                <div class="answer">Вы зарегистрированы. <br> Добро пожаловать на фестиваль!. </div>
 
-                <div class="description">
-                      <div>Агентам: повторно вводите свои данные для отображения FESTCOINS на счете.</div><br>
-                      <div>Ссылка для передачи другу: <div class = "link"></div></div>
-                      </div>
-                      <br>
-                      <div class="festcoins">
-                      <div>FESTCOINS: <span id="festcoins_amount">00.00</span></div>
-                                            </div>
-                </div>
-
+              
             </div>
         </div>
     </div>
@@ -534,35 +488,27 @@ $('a.smooth-scroll').on('click', function(event) {
 
 $("input[type='number']").bind("input", function() {
     var kolvo = $(".kolvo").val();
-    $(".cost").text(kolvo * 1000 + ".00");
-    $("#sum").val(kolvo * 1000 + ".00");
+   
 });
 
-$('.kolvo').val(1);
-$(".cost").text(1000.00);
 $("#continue").prop("disabled",false);    
 
 
 function payment(){
     var nickname = document.getElementById("nickname").value; 
-    var pass = document.getElementById("pass").value;
+    var phone = document.getElementById("phone").value;
     var email = document.getElementById("email").value;
     var kolvo = document.getElementById("kolvo").value;
-    $("#continue").text("Регистрация в блокчейне DACom...");
-    $('.link').text('https://fest.mapala/?ref=' + nickname);    
-
-
-    $('#sum').val(kolvo * 1000 + '.00');
-    $('#customerNumber').val(nickname);
+    $("#continue").text("Регистрация...");
     
     $.post(
-    "/payment.php", //УБРАТЬ ФЕСТ!!!
+    "/mapalafest/payment.php", //УБРАТЬ ФЕСТ!!!
     {
         nickname: nickname,
-        pass: pass,
+        phone: phone,
         email: email,
         kolvo:kolvo,
-        ref: <?= "'" . $ref . "'" ?>
+       
     },
     onAjaxSuccess
     );
@@ -570,21 +516,9 @@ function payment(){
  
 function onAjaxSuccess(data)
 {
-    console.log(data);
-    data=JSON.parse(data);
-    if (data['error'] == '1') {
-        alert(data['message']);
-        $("#continue").text("Продолжить");
-    } else {
-        $("#bitcoinNum").text(data['btc']);
-        $("#amount").text(data['amount']);
-        $(".payment-methods").show();
-        $("#continue").prop("disabled",true);
-        $("#festcoins_amount").text(data['festcoins_amount']);
-        $(".description").show();
-        $('.festcoins').show();
-
-    }
+    $("#continue").hide();
+    $(".order-form").hide();
+    $(".answer").show();
 }
 
 
