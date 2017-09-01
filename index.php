@@ -393,7 +393,7 @@
             </button>
             <div class="modal-body">
                 <div class="order-form inputs">
-                    <div>Стоимость: БЕСПЛАТНО</div>
+                    <div style="font-weight: 600;">Стоимость: БЕСПЛАТНО</div>
                     <br>    
                     <label class="input">
                         <div class="input-title">Имя, Фамилия</div>
