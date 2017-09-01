@@ -502,7 +502,7 @@ function payment(){
     $("#continue").text("Регистрация...");
     
     $.post(
-    "/mapalafest/payment.php", //УБРАТЬ ФЕСТ!!!
+    "/payment.php", //УБРАТЬ ФЕСТ!!!
     {
         nickname: nickname,
         phone: phone,
